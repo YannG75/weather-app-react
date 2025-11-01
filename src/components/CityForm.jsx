@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { History } from "../assets/History.jsx"
 function CityForm({city, setCity, handleSubmit, showHistory, setShowHistory}) {
 
@@ -12,8 +11,15 @@ function CityForm({city, setCity, handleSubmit, showHistory, setShowHistory}) {
             <button className="btn-history" type="button" onClick={handleHistory}>
                 <History />
             </button>
-            <input type="text" name={"city"} placeholder="Entrez une ville..." value={city} onChange={(e) => setCity(e.target.value)} />
+            <input
+                type="search"
+                name={"city"}
+                placeholder="Entrez une ville..."
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+            />
             <button className="btn-search" type="submit">Rechercher</button>
+            <p className="mobile-hint">Appuyez sur Rechercher</p>
         </form>
     )
 }
