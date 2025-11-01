@@ -19,7 +19,7 @@ function CityForm({city, setCity, handleSubmit, showHistory, setShowHistory}) {
                 onChange={(e) => setCity(e.target.value)}
             />
             <button className="btn-search" type="submit">Rechercher</button>
-            <p className="mobile-hint">Appuyez sur Rechercher</p>
+            <p className="mobile-hint">Appuyez sur Rechercher ou 🔎</p>
         </form>
     )
 }
